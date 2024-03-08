@@ -1,4 +1,4 @@
-# This my machine setup script
+# dotfiles repo
 
 Clone the repo in desired directory
 

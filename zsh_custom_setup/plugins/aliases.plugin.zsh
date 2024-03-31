@@ -21,3 +21,19 @@ find_and_edit ()
 }
 
 alias fe=find_and_edit
+
+find_and_edit_with_editor_of_choice ()
+{
+    local file
+    local editor=$1
+    if [ -x "$(command -v "$editor")" ]; then
+        file=$(find * -type f | fzf --border --reverse --preview="bat --number --color=always {}")
+        if [ "$file" != "" ] && [ "$editor" != "" ]; then
+            $editor $file
+        fi
+    else 
+        echo "$editor not found"
+    fi
+}
+
+alias fewe=find_and_edit_with_editor_of_choice $1

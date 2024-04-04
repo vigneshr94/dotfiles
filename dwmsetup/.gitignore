@@ -1,0 +1,12 @@
+dmenu/dmenu
+dmenu/config.h
+dmenu/dmenu.o
+dmenu/drw.o
+dmenu/stest
+dmenu/stest.o
+dmenu/util.o
+dwm/dwm
+dwm/dwm.o
+dwm/drw.o
+dwm/util.o
+tarfiles/*

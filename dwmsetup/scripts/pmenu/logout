@@ -1,3 +1,0 @@
-#!/bin/bash
-
-exec pkill -15 Xorg

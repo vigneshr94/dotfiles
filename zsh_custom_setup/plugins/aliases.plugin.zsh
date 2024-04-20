@@ -10,6 +10,16 @@ alias ffwp='find * -type f | fzf-tmux --border --reverse --preview="bat --number
 alias fgc="git log --oneline | fzf-tmux --reverse --border --multi --preview 'git show {+1}'"
 alias ffwop='find * -type f | fzf-tmux --border --reverse --preview-window hidden --bind "?:preview:bat --color=always --number {}"'
 alias omzr="omz reload"
+alias startvm='start_stop_vm vignesh-dev-2 start'
+alias stopvm='start_stop_vm vignesh-dev-2 stop'
+
+
+start_stop_vm()
+{
+  local vm=$1
+  local state=$2
+  gcloud compute instances $state $vm --project ftc-qa-283616
+}
 
 find_and_edit ()
 {

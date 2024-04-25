@@ -2,7 +2,7 @@
 alias vi=nvim
 alias vim=nvim
 alias cat=bat
-alias ls=colorls
+alias ls="colorls --dark"
 alias tf="tmux ls | fzf-tmux --border --height 40% --reverse | cut -d ':' -f 1 | xargs -n 1 tmux switchc -t"
 alias plz=sudo
 alias lg=lazygit

@@ -12,6 +12,7 @@ alias ffwop='find * -type f | fzf-tmux --border --reverse --preview-window hidde
 alias omzr="omz reload"
 alias startvm='start_stop_vm vignesh-dev-2 start'
 alias stopvm='start_stop_vm vignesh-dev-2 stop'
+alias devvm="ssh devvm"
 
 
 start_stop_vm()

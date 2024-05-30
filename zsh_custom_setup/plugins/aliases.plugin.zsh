@@ -12,6 +12,8 @@ alias ffwop='find * -type f | fzf-tmux --border --reverse --preview-window hidde
 alias omzr="omz reload"
 alias startvm='start_stop_vm vignesh-dev-2 start'
 alias stopvm='start_stop_vm vignesh-dev-2 stop'
+alias startaz="az vm start -g rg-sunops-developer-001 -n vm-sunops-dev-002"
+alias stopaz='az vm stop -g rg-sunops-developer-001 -n vm-sunops-dev-002'
 alias devvm="ssh devvm"
 
 

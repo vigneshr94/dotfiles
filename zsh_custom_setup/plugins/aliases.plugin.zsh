@@ -15,6 +15,7 @@ alias stopvm='start_stop_vm vignesh-dev-2 stop'
 alias startaz="az vm start -g rg-sunops-developer-001 -n vm-sunops-dev-002"
 alias stopaz='az vm stop -g rg-sunops-developer-001 -n vm-sunops-dev-002'
 alias devvm="ssh devvm"
+alias azuredev="ssh azure"
 
 
 start_stop_vm()

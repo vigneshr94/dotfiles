@@ -1,0 +1,308 @@
+{
+	// workbench
+	"workbench.colorCustomizations": {
+		"statusBar.background": "#5f00af",
+		"statusBar.noFolderBackground": "#5f00af",
+		"statusBar.debuggingBackground": "#5f00af",
+		"statusBar.foreground": "#ffffff",
+		"statusBar.debuggingForeground": "#ffffff"
+	},
+	"security.workspace.trust.untrustedFiles": "open",
+	"workbench.colorTheme": "Andromeda",
+	"workbench.editor.defaultBinaryEditor": "jupyter-notebook",
+	"workbench.settings.applyToAllProfiles": [
+		"editor.fontSize",
+		"editor.fontFamily",
+		"files.autoSave"
+	],
+	"workbench.panel.defaultLocation": "right",
+	"workbench.iconTheme": "ayu",
+
+
+	// Editor Window
+	"window.titleBarStyle": "custom",
+	"zenMode.centerLayout": false,
+	"zenMode.hideLineNumbers": false,
+	"zenMode.fullScreen": true,
+	"zenMode.hideStatusBar": false,
+
+
+
+	// Editor
+	"editor.lineNumbers": "relative",
+	"editor.codeActionsOnSave": {
+		"source.organizeImports": "always",
+		"source.unusedImports": "explicit",
+	},
+	"editor.cursorSmoothCaretAnimation": "on",
+	"editor.wordWrap": "on",
+	"editor.rulers": [
+	   120 
+	],
+	"editor.inlineSuggest.suppressSuggestions": true,
+	"editor.guides.bracketPairs": true,
+	"editor.accessibilitySupport": "off",
+	"editor.cursorStyle": "line",
+	"editor.cursorBlinking": "expand",
+	"editor.fontLigatures": true,
+	"editor.fontFamily": "FiraCode Nerd Font Mono",
+	"editor.fontSize": 14,
+	"editor.codeLensFontFamily": "FiraCode Nerd Font Mono",
+	"editor.formatOnPaste": true,
+	"editor.minimap.autohide": true,
+	"files.autoSave": "onFocusChange",
+
+
+	// Language Formatters
+	"[html]": {
+		"editor.defaultFormatter": "vscode.html-language-features"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[python]": {
+		"editor.defaultFormatter": "ms-python.black-formatter"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[dockercompose]":  {
+		"editor.insertSpaces": true,
+		"editor.tabSize": 2,
+		"editor.autoIndent": "advanced",
+		"editor.quickSuggestions": {
+				"other": true,
+				"comments": false,
+				"strings": true
+		}
+	},
+	"[dockerfile]":  {
+		"editor.quickSuggestions": {
+				"strings": true
+		}
+	},
+	"[django-html]":  {
+		"editor.quickSuggestions": {
+				"other": true,
+				"comments": true,
+				"strings": true
+		}
+	},
+	"[css]":  {
+		"editor.suggest.insertMode": "replace",
+		"cSpell.fixSpellingWithRenameProvider": false
+	},
+
+
+	// Terminal
+	"terminal.integrated.fontSize": 14,
+	"terminal.integrated.fontFamily": "FiraCode Nerd Font Mono",
+	"terminal.integrated.cursorStyle": "line",
+	"terminal.integrated.copyOnSelection": true,
+	"terminal.integrated.tabs.enabled": true,
+
+
+	// Window integrated terminal
+	"terminal.integrated.defaultProfile.windows": "Ubuntu (WSL)",
+	"terminal.integrated.profiles.windows": {
+		"PowerShell": {
+			"source": "PowerShell",
+			"icon": "terminal-powershell"
+		},
+		"Command Prompt": {
+			"path": [
+				"${env:windir}\\Sysnative\\cmd.exe",
+				"${env:windir}\\System32\\cmd.exe"
+			],
+			"args": [],
+			"icon": "terminal-cmd"
+		},
+		"Git Bash": {
+			"source": "Git Bash"
+		},
+		"Ubuntu-22.04 (WSL)": {
+			"path": "C:\\WINDOWS\\System32\\wsl.exe",
+			"args": [
+				"-d",
+				"Ubuntu-22.04"
+			]
+		},
+		"tmux-shell": {
+			"path": "tmux",
+			"args": ["new", "-A", "-s", "vscode:${workspaceFolder}"]
+		}
+	},
+
+
+	// Linux integrated terminal
+	"terminal.integrated.defaultProfile.linux": "zsh",
+	"terminal.integrated.profiles.linux": {
+		"bash": {
+			"path": "bash",
+			"icon": "terminal-bash"
+		},
+		"zsh": {
+			"path": "zsh"
+		},
+		"fish": {
+			"path": "fish"
+		},
+		"tmux": {
+			"path": "tmux",
+			"icon": "terminal-tmux"
+		},
+		"pwsh": {
+			"path": "pwsh",
+			"icon": "terminal-powershell"
+		}
+	},
+
+
+	// Mac Integrated Terminal
+	"terminal.external.osxExec": "Alacritty.app",
+	"terminal.integrated.defaultProfile.osx": "zsh",
+	"terminal.integrated.inheritEnv": false,
+	"terminal.integrated.profiles.osx": {
+		"bash": {
+			"path": "bash",
+			"args": [
+				"-l"
+			],
+			"icon": "terminal-bash"
+		},
+		"zsh": {
+			"path": "zsh",
+			"args": [
+				"-l"
+			]
+		},
+		"fish": {
+			"path": "fish",
+			"args": [
+				"-l"
+			]
+		},
+		"tmux": {
+			"path": "tmux",
+			"icon": "terminal-tmux",
+			"args": [
+				"new-session", 
+				"-A", 
+				"-s", 
+				"vscode.${workspaceFolder}"
+			]
+		},
+		"pwsh": {
+			"path": "pwsh",
+			"icon": "terminal-powershell"
+		}
+	},
+
+
+	// Git Configuration
+	"diffEditor.ignoreTrimWhitespace": false,
+	"github.copilot.editor.enableAutoCompletions": true,
+	"git.confirmSync": false,
+	"scm.experimental.showHistoryGraph": true,
+
+
+	// Vim Keybindings
+	"vim.enableNeovim": true,
+	"vim.useSystemClipboard": true,
+	"vim.history": 1000,
+	"vim.leader": "space",
+	"vim.neovimUseConfigFile": true,
+	"vim.neovimConfigPath": "~/.config/nvim/init.lua",
+	"vim.neovimPath": "/opt/homebrew/bin/nvim",
+	"vim.textwidth": 120,
+	"vim.highlightedyank.enable": true,
+
+
+	// Python Jupyter Notebook
+	"jupyter.interactiveWindow.creationMode": "perFile",
+	"jupyter.allowUnauthorizedRemoteConnection": true,
+	"jupyter.interactiveWindow.textEditor.executeSelection": true,
+	"jupyter.interactiveWindow.textEditor.magicCommandsAsComments": true,
+
+
+	// Python Configuration
+	"python.defaultInterpreterPath": "/opt/homebrew/bin/python3.11",
+	"flake8.args": [
+		"--max-line-length=120"
+	],
+	"interactiveWindow.executeWithShiftEnter": true,
+	"python.languageServer": "Jedi",
+
+
+	// CMake Configuration
+	"cmake.configureOnOpen": true,
+
+
+	// CSpell Configuration
+	"cSpell.userWords": [
+		"Balena"
+	],
+
+
+	// JavaScript, TypeScript, Json & Prettier Configuration
+	"prettier.tabWidth": 4,
+	"emmet.includeLanguages": {
+		"javascript": "javascriptreact",
+		"html": "html",
+		"typescript": "typescriptreact",
+	},
+	"emmet.triggerExpansionOnTab": true,
+	"emmet.useInlineCompletions": true,
+
+
+	// Docker
+	"docker.contexts.label": "Name",
+
+
+	// YAML Configuration
+	"yaml.customTags": [
+		"!And",
+		"!And sequence",
+		"!If",
+		"!If sequence",
+		"!Not",
+		"!Not sequence",
+		"!Equals",
+		"!Equals sequence",
+		"!Or",
+		"!Or sequence",
+		"!FindInMap",
+		"!FindInMap sequence",
+		"!Base64",
+		"!Join",
+		"!Join sequence",
+		"!Cidr",
+		"!Ref",
+		"!Sub",
+		"!Sub sequence",
+		"!GetAtt",
+		"!GetAZs",
+		"!ImportValue",
+		"!ImportValue sequence",
+		"!Select",
+		"!Select sequence",
+		"!Split",
+		"!Split sequence"
+	],
+
+
+	// HTTP Proxy Settings
+	"http.proxyAuthorization": null,
+	"http.proxySupport": "on",
+	"http.proxyStrictSSL": false,
+
+
+	// Kubernetes Configuration
+	"vs-kubernetes": {
+		"vscode-kubernetes.kubectl-path-linux": "/home/r_vigneswar/.local/state/vs-kubernetes/tools/kubectl/kubectl",
+		"vscode-kubernetes.helm-path-linux": "/home/r_vigneswar/.local/state/vs-kubernetes/tools/helm/linux-amd64/helm",
+		"vscode-kubernetes.minikube-path-linux": "/home/r_vigneswar/.local/state/vs-kubernetes/tools/minikube/linux-amd64/minikube",
+		"vscode-kubernetes.helm-path-mac": "/Users/admin/.vs-kubernetes/tools/helm/darwin-arm64/helm",
+		"vscode-kubernetes.minikube-path-mac": "/Users/admin/.vs-kubernetes/tools/minikube/darwin-arm64/minikube"
+	},
+}

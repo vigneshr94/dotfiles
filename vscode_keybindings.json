@@ -1,0 +1,110 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "cmd+n",
+        "command": "extension.advancedNewFile"
+    },
+    {
+        "key": "alt+cmd+n",
+        "command": "-extension.advancedNewFile"
+    },
+    {
+        "key": "cmd+r k",
+        "command": "workbench.action.remote.close"
+    },
+    {
+        "key": "shift+alt+cmd+f",
+        "command": "notebook.formatCell",
+        "when": "editorHasDocumentFormattingProvider && editorTextFocus && inCompositeEditor && notebookEditable && !editorReadonly && activeEditor == 'workbench.editor.notebook'"
+    },
+    {
+        "key": "shift+alt+f",
+        "command": "-notebook.formatCell",
+        "when": "editorHasDocumentFormattingProvider && editorTextFocus && inCompositeEditor && notebookEditable && !editorReadonly && activeEditor == 'workbench.editor.notebook'"
+    },
+    // Toggle between terminal and editor focus
+    {
+        "key": "ctrl+`",
+        "command": "workbench.action.terminal.focus"
+    },
+    {
+        "key": "ctrl+`",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+`",
+        "command": "workbench.action.terminal.focus",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+`",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+`",
+        "command": "workbench.action.terminal.focus",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+`",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+`",
+        "command": "workbench.action.terminal.focus",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+`",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+`",
+        "command": "workbench.action.terminal.focus",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+`",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+`",
+        "command": "workbench.action.terminal.focus",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+`",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+`",
+        "command": "workbench.action.terminal.focus",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+`",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+`",
+        "command": "workbench.action.terminal.focus",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+`",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+`",
+        "command": "workbench.action.terminal.focus",
+        "when": "editorFocus"
+    }
+]

@@ -226,7 +226,7 @@
 
 
 	// Python Configuration
-	"python.defaultInterpreterPath": "/opt/homebrew/bin/python3.11",
+	"python.defaultInterpreterPath": "/usr/bin/python3",
 	"flake8.args": [
 		"--max-line-length=120"
 	],

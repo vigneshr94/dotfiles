@@ -106,5 +106,9 @@
         "key": "ctrl+`",
         "command": "workbench.action.terminal.focus",
         "when": "editorFocus"
-    }
+    },
+    {
+        "key": "cmd+t cmd+k",
+        "command": "workbench.action.terminal.kill"
+    },
 ]

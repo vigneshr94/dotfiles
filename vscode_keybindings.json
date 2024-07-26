@@ -111,4 +111,8 @@
         "key": "cmd+t cmd+k",
         "command": "workbench.action.terminal.kill"
     },
+    {
+        "key": "cmd+g c",
+        "command": "workbench.panel.chat.view.copilot.focus"
+    },
 ]

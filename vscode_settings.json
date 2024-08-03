@@ -21,6 +21,7 @@
 
 	// Editor Window
 	"window.titleBarStyle": "custom",
+	"zenMode.restore": true,
 	"zenMode.centerLayout": false,
 	"zenMode.hideLineNumbers": false,
 	"zenMode.fullScreen": true,

@@ -216,6 +216,119 @@
 	"vim.neovimPath": "/opt/homebrew/bin/nvim",
 	"vim.textwidth": 120,
 	"vim.highlightedyank.enable": true,
+	"vim.easymotion": true,
+	"vim.useCtrlKeys": true,
+	"vim.insertModeKeyBindings": [
+		{
+			"before":[
+				"j",
+				"k"
+			],
+			"after": [
+				"<Esc>"
+			],
+		},
+	],
+	"vim.normalModeKeyBindingsNonRecursive": [
+		{
+			"before": [
+				"<leader>",
+				"t"
+			],
+			"after": [],
+			"commands": [
+				{
+					"command": "workbench.action.terminal.focus"
+				}
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"u"
+			],
+			"after": [],
+			"commands": [
+				{
+					"command": "workbench.action.focusActiveEditorGroup"
+				}
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"p"
+			],
+			"after": [],
+			"commands": [
+				{
+					"command": "workbench.action.quickOpen"
+				}
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"i",
+				"t"
+			],
+			"after": [],
+			"commands": [
+				{
+					"command": "workbench.action.terminal.toggleTerminal"
+				}
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"v",
+				"s"
+			],
+			"after": [],
+			"commands": [
+				{
+					"command": "workbench.action.splitEditor"
+				}
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"h"
+			],
+			"after": [],
+			"commands": [
+				{
+					"command": "workbench.action.focusFirstEditorGroup"
+				}
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"l"
+			],
+			"after": [],
+			"commands": [
+				{
+					"command": "workbench.action.focusSecondEditorGroup"
+				}
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"w"
+			],
+			"after": [],
+			"commands": [
+				{
+					"command": "workbench.action.closeActiveEditor"
+				}
+			]
+		},
+	],
 
 
 	// Python Jupyter Notebook

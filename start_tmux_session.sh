@@ -1,42 +1,41 @@
 #!/bin/bash
 
-session="Dashboard"
-ch_dir="~/OMDashboard"
+session="CAI"
+ch_dir="~/FTC_Solar/Projects/Main_Projects/construction_ai_application"
 win1="Terminal"
-win2="dc_logs"
-win3="container_logs"
-win4="Dashboard_terminal"
-win5="Editor"
+win2="Explorer"
+win3="Backend"
+win4="Workspace"
+win5="PythonShell"
 win6="Git"
 
-cmd_win3_pane_1="htop"
-cmd_win3_pane_2="ping 8.8.8.8"
-cmd_win3_pane_3="top"
-cmd_win2_pane_1="ls -la"
-
-editor_cmd="nvim"
-git_cmd="lazygit"
+win2_cmd="yazi"
+win3_cmd="poetry shell"
+win5_cmd="poetry shell"
+win6_cmd="lg"
 
 if ! tmux has-session -t "$session"; then
 
     tmux new-session -s "$session" -d
     tmux rename-window -t "$session":1 "$win1"
-    tmux send-keys -t "$session":1 "$ch_dir" ENTER
     tmux new-window -t "$session":2 -n "$win2"
+    tmux send-keys -t "$session":2 "$ch_dir" ENTER
     tmux new-window -t "$session":3 -n "$win3"
+    tmux send-keys -t "$session":3 "$ch_dir/backend" ENTER
     tmux new-window -t "$session":4 -n "$win4"
+    tmux send-keys -t "$session":4 "$ch_dir" ENTER
     tmux new-window -t "$session":5 -n "$win5"
+    tmux send-keys -t "$session":5 "$ch_dir/backend" ENTER
     tmux new-window -t "$session":6 -n "$win6"
+    tmux send-keys -t "$session":6 "$ch_dir" ENTER
 
-    tmux split-window -t "$session":3 -v
-    tmux split-window -t "$session":3.2 -h
+    tmux split-window -t "$session":4 -v
+    tmux send-keys -t "$session":4.2 "$ch_dir" ENTER
 
-    tmux send-keys -t "$session":3.1 "$cmd_win3_pane_1" ENTER
-    tmux send-keys -t "$session":3.2 "$cmd_win3_pane_2" ENTER
-    tmux send-keys -t "$session":3.3 "$cmd_win3_pane_3" ENTER 
-    tmux send-keys -t "$session":2 "$cmd_win2_pane_1" ENTER
-    tmux send-keys -t "$session":5 "$editor_cmd" ENTER
-    tmux send-keys -t "$session":6 "$git_cmd" ENTER
+    tmux send-keys -t "$session":2 "$win2_cmd" ENTER
+    tmux send-keys -t "$session":3 "$win3_cmd" ENTER
+    tmux send-keys -t "$session":5 "$win5_cmd" ENTER
+    tmux send-keys -t "$session":6 "$win6_cmd" ENTER
 
 fi
 

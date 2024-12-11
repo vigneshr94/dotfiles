@@ -14,8 +14,28 @@ win3_cmd="poetry shell"
 win5_cmd="poetry shell"
 win6_cmd="lg"
 
-if ! tmux has-session -t "$session"; then
+is_tmux_running() {
+    if tmux ls &> /dev/null; then
+        echo "Tmux server is running......";
+        return 0;
+    else
+        echo "Tmux server is not running......";
+        return 1;
+    fi
+}
 
+is_session_exists() {
+    local session=$1;
+    if tmux has-session -t "$session" &> /dev/null; then
+        echo "$session exits considering attaching to that session......";
+        return 0;
+    else
+        echo "$session not found. considering creating the session.......";
+        return 1;
+    fi
+}
+
+create_session() {
     tmux new-session -s "$session" -d
     tmux rename-window -t "$session":1 "$win1"
     tmux new-window -t "$session":2 -n "$win2"
@@ -36,7 +56,43 @@ if ! tmux has-session -t "$session"; then
     tmux send-keys -t "$session":3 "$win3_cmd" ENTER
     tmux send-keys -t "$session":5 "$win5_cmd" ENTER
     tmux send-keys -t "$session":6 "$win6_cmd" ENTER
+}
 
-fi
+attach_to_session(){
+    read -p "Do you want to attach to the $session session (y/n): " option;
+    case "$option" in
+        y|Y)
+            tmux attach-session -t $session
+            ;;
+        n|N)
+            echo "Exiting the script."
+            exit 0
+            ;;
+        *)
+            echo "No option choosen, consider attacting to the preferred session."
+            exit 0
+            ;;
+    esac
+}
 
-tmux switch-client -t "$session"
+main() {
+    if is_tmux_running; then
+        echo "Tmux server is running........";
+        echo "Checking for session $session";
+        if is_session_exists $session; then
+            echo "$session found attaching to it.";
+            attach_to_session
+        else
+            echo "$session not found creating a new session.";
+            create_session
+            echo "$session Create successfully";
+            attach_to_session
+        fi
+    else
+        echo "Tmux Server is not running. starting the server and creating the session....."
+        create_session
+        attach_to_session
+    fi
+}
+
+main

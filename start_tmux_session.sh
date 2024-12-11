@@ -56,6 +56,7 @@ create_session() {
     tmux send-keys -t "$session":3 "$win3_cmd" ENTER
     tmux send-keys -t "$session":5 "$win5_cmd" ENTER
     tmux send-keys -t "$session":6 "$win6_cmd" ENTER
+    tmux select-window -t "$session":1
 }
 
 attach_to_session(){

@@ -115,4 +115,12 @@
         "key": "cmd+g c",
         "command": "workbench.panel.chat.view.copilot.focus"
     },
+    {
+        "key": "ctrl+shift+cmd+n",
+        "command": "explorer.newFolder"
+    },
+    {
+        "key": "ctrl+shift+alt+cmd+n",
+        "command": "explorer.newFile"
+    }
 ]

@@ -1,4 +1,5 @@
 
+cwd=$(pwd)
 alias vi=nvim
 alias vim=nvim
 alias cat=bat
@@ -16,7 +17,11 @@ alias startaz="az vm start -g rg-sunops-developer-001 -n vm-sunops-dev-002"
 alias stopaz='az vm stop -g rg-sunops-developer-001 -n vm-sunops-dev-002'
 alias devvm="ssh devvm"
 alias azuredev="ssh azure"
-
+alias ctjh=".config/connect_to_jumphost.sh"
+alias cd=z
+alias ldc=lazydocker
+alias zt=zellij
+alias ztr="zellij run"
 
 start_stop_vm()
 {

@@ -1,0 +1,349 @@
+{
+    "security.workspace.trust.untrustedFiles": "open",
+    "cursor.cpp.disabledLanguages": ["plaintext", "markdown", "scminput"],
+
+    // Workbench Theme Settings
+    "workbench.startupEditor": "welcomePage",
+    "material-icon-theme.folders.color": "#26a69a",
+    "workbench.productIconTheme": "material-product-icons",
+    "workbench.colorTheme": "Community Material Theme Ocean",
+    "workbench.iconTheme": "material-icon-theme",
+    "material-icon-theme.activeIconPack": "react_redux",
+    "workbench.preferredDarkColorTheme": "Community Material Theme Ocean",
+    "workbench.editor.defaultBinaryEditor": "jupyter-notebook",
+    "workbench.settings.applyToAllProfiles": [
+        "editor.fontSize",
+        "editor.fontFamily",
+        "files.autoSave"
+    ],
+    "window.titleBarStyle": "custom",
+
+
+    // Appereance
+    "zenMode.restore": true,
+    "zenMode.centerLayout": false,
+    "zenMode.hideLineNumbers": false,
+    "zenMode.fullScreen": true,
+    "zenMode.hideStatusBar": false,
+
+
+    // Editor Settings
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "always",
+        "source.unusedImports": "always"
+    },
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.lineNumbers": "relative",
+    "editor.wordWrap": "on",
+    "editor.rulers": [120],
+    "editor.inlineSuggest.suppressSuggestions": true,
+    "editor.guides.bracketPairs": true,
+    "editor.accessibilitySupport": "off",
+    "editor.cursorStyle": "line",
+    "editor.cursorBlinking": "expand",
+    "editor.fontLigatures": true,
+    "editor.fontFamily": "FiraCode Nerd Font Mono",
+    "editor.fontSize": 12.5,
+    "editor.codeLensFontFamily": "FiraCode Nerd Font Mono",
+    "editor.formatOnPaste": true,
+    "editor.minimap.autohide": true,
+    // "editor.formatOnSave": true,
+
+    // Files and explorer
+    "files.autoSave": "onFocusChange",
+    "explorer.compactFolders": false,
+    // HTML
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "http.proxyAuthorization": null,
+    "http.proxySupport": "on",
+    "http.proxyStrictSSL": false,
+
+
+    // JAVA SCRIPT
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact",
+        "html": "html",
+        "typescript": "typescriptreact"
+    },
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.useInlineCompletions": true,
+    "prettier.tabWidth": 4,
+
+
+    // PYTHON
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.wordWrap": "wordWrapColumn",
+        "editor.wordWrapColumn": 120,
+        // "editor.formatOnSave": true
+    },
+    "jupyter.interactiveWindow.creationMode": "perFile",
+    "jupyter.allowUnauthorizedRemoteConnection": true,
+    "jupyter.interactiveWindow.textEditor.executeSelection": true,
+    "jupyter.interactiveWindow.textEditor.magicCommandsAsComments": true,
+    "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
+    "interactiveWindow.executeWithShiftEnter": true,
+    "ruff.lineLength": 120,
+    "ruff.lint.enable": true,
+    "ruff.nativeServer": "on",
+    "ruff.organizeImports": true,
+    "ruff.path": ["/Users/admin/.local/bin/ruff"],
+    "ruff.showSyntaxErrors": true,
+    "ruff.enable": true,
+    "python.languageServer": "Default",
+
+
+    // JSON
+    "[json]": {
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "json.schemaDownload.enable": true,
+
+    // GOLang
+    "[go]": {
+        "editor.defaultFormatter": "golang.go",
+        // "editor.formatOnSave": true,
+        "editor.wordWrap": "wordWrapColumn",
+        "editor.wordWrapColumn": 120,
+    },
+    "gopls": {
+        "ui.semanticTokens": true,
+        "formatting.gofumpt": true
+        },
+
+
+    // Docker and Kubernetes
+    "[dockercompose]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 4,
+        "editor.autoIndent": "advanced",
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": false,
+            "strings": true
+        },
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    "[dockerfile]": {
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true,
+        "editor.autoIndent": "advanced",
+        "editor.quickSuggestions": {
+            "strings": true,
+        },
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "yaml.customTags": [
+        "!And",
+        "!And sequence",
+        "!If",
+        "!If sequence",
+        "!Not",
+        "!Not sequence",
+        "!Equals",
+        "!Equals sequence",
+        "!Or",
+        "!Or sequence",
+        "!FindInMap",
+        "!FindInMap sequence",
+        "!Base64",
+        "!Join",
+        "!Join sequence",
+        "!Cidr",
+        "!Ref",
+        "!Sub",
+        "!Sub sequence",
+        "!GetAtt",
+        "!GetAZs",
+        "!ImportValue",
+        "!ImportValue sequence",
+        "!Select",
+        "!Select sequence",
+        "!Split",
+        "!Split sequence"
+    ],
+    "vs-kubernetes": {
+        "vscode-kubernetes.kubectl-path-linux": "/home/r_vigneswar/.local/state/vs-kubernetes/tools/kubectl/kubectl",
+        "vscode-kubernetes.helm-path-linux": "/home/r_vigneswar/.local/state/vs-kubernetes/tools/helm/linux-amd64/helm",
+        "vscode-kubernetes.minikube-path-linux": "/home/r_vigneswar/.local/state/vs-kubernetes/tools/minikube/linux-amd64/minikube",
+        "vscode-kubernetes.helm-path-mac": "/Users/admin/.vs-kubernetes/tools/helm/darwin-arm64/helm",
+        "vscode-kubernetes.minikube-path-mac": "/Users/admin/.vs-kubernetes/tools/minikube/darwin-arm64/minikube"
+    },
+    "containers.contexts.label": "Name",
+    "docker.extension.enableComposeLanguageServer": true,
+    
+    // GitHub Actions
+    "[github-actions-workflow]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "redhat.telemetry.enabled": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "git.confirmSync": false,
+
+    // Shell Script
+    "[shellscript]": {
+        "editor.defaultFormatter": "mads-hartmann.bash-ide-vscode"
+    },
+
+    // C Lang
+    "cmake.configureOnOpen": true,
+    "cSpell.userWords": ["Balena", "Vigneswar"],
+    
+    "remote.SSH.remotePlatform": {
+        "rvigneswar@192.168.95.249": "linux",
+        "rpi@192.168.95.222": "linux",
+        "rpi5": "linux"
+    },
+
+    // Markdown
+    "markdown-preview-enhanced.codeBlockTheme": "github-dark.css",
+    "markdown-preview-enhanced.previewTheme": "github-dark.css",
+
+    // Terminal settings
+    "terminal.integrated.fontSize": 12.5,
+    "terminal.integrated.fontFamily": "FiraCode Nerd Font Mono",
+    "terminal.integrated.cursorStyle": "block",
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.tabs.enabled": true,
+
+    // Windows
+    "terminal.integrated.defaultProfile.windows": "Ubuntu (WSL)",
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [],
+            "icon": "terminal-cmd"
+        }
+    },
+
+    // Linux
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "terminal.integrated.profiles.linux": {
+        "bash": {
+            "path": "bash",
+            "icon": "terminal-bash"
+        },
+        "zsh": {
+            "path": "zsh"
+        }
+    },
+
+    // Mac OS 
+    "terminal.external.osxExec": "Ghostty.app",
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "terminal.integrated.inheritEnv": false,
+    "terminal.integrated.profiles.osx": {
+        "zsh": {
+            "path": "zsh",
+            "args": ["-l"]
+        }
+    },
+
+    // VIM Settings
+    "vim.enableNeovim": true,
+    "vim.useSystemClipboard": true,
+    "vim.history": 1000,
+    "vim.leader": "space",
+    "vim.neovimUseConfigFile": true,
+    "vim.neovimConfigPath": "~/.config/nvim/init.lua",
+    "vim.neovimPath": "/opt/homebrew/bin/nvim",
+    "vim.textwidth": 120,
+    "vim.highlightedyank.enable": true,
+    "vim.easymotion": true,
+    "vim.useCtrlKeys": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "k"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<leader>", "t"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.terminal.focus"
+                }
+            ]
+        },
+        {
+            "before": ["<leader>", "u"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.focusActiveEditorGroup"
+                }
+            ]
+        },
+        {
+            "before": ["<leader>", "p"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.quickOpen"
+                }
+            ]
+        },
+        {
+            "before": ["<leader>", "i", "t"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.terminal.toggleTerminal"
+                }
+            ]
+        },
+        {
+            "before": ["<leader>", "v", "s"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.splitEditor"
+                }
+            ]
+        },
+        {
+            "before": ["<leader>", "h"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.focusFirstEditorGroup"
+                }
+            ]
+        },
+        {
+            "before": ["<leader>", "l"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.focusSecondEditorGroup"
+                }
+            ]
+        },
+        {
+            "before": ["<leader>", "w"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.closeActiveEditor"
+                }
+            ]
+        }
+    ]
+}

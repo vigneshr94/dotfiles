@@ -1,58 +1,50 @@
 
-cwd=$(pwd)
-alias vi=nvim
-alias vim=nvim
+function fed(){
+  local editor="nvim"
+  local location="$PWD"
+  
+  while [[ $# -gt 0 ]]; do
+    case "$1" in
+      -e) editor="$2"; shift 2 ;;
+      -l) location="$2"; shift 2 ;;
+      *) location="$1"; shift ;;
+    esac
+  done
+  
+  local file
+  file=$(find "$location" -type f | fzf-tmux --border --reverse --preview='bat --number --color=always {}')
+  [[ -n "$file" ]] && "$editor" "$file"
+}
+
+# common alias
+alias vi=vim
+alias v=nvim
 alias cat=bat
 alias ls="colorls --dark"
-alias tf="tmux ls | fzf-tmux --border --height 40% --reverse | cut -d ':' -f 1 | xargs -n 1 tmux switchc -t"
-alias plz=sudo
 alias lg=lazygit
-alias ffwp='find * -type f | fzf-tmux --border --reverse --preview="bat --number --color=always {}"'
-alias fgc="git log --oneline | fzf-tmux --reverse --border --multi --preview 'git show {+1}'"
-alias ffwop='find * -type f | fzf-tmux --border --reverse --preview-window hidden --bind "?:preview:bat --color=always --number {}"'
 alias omzr="omz reload"
-alias startvm='start_stop_vm vignesh-dev-2 start'
-alias stopvm='start_stop_vm vignesh-dev-2 stop'
-alias startaz="az vm start -g rg-sunops-developer-001 -n vm-sunops-dev-002"
-alias stopaz='az vm stop -g rg-sunops-developer-001 -n vm-sunops-dev-002'
-alias devvm="ssh devvm"
-alias azuredev="ssh azure"
-alias ctjh=".config/connect_to_jumphost.sh"
 alias cd=z
 alias ldc=lazydocker
+
+# azure virtual machines alias
+alias startaz="az vm start -g rg-sunops-developer-001 -n vm-sunops-dev-002"
+alias stopaz='az vm stop -g rg-sunops-developer-001 -n vm-sunops-dev-002'
+alias azuredev="ssh azure"
+alias azurelogin="az login --tenant \"f585aa17-d773-4604-ae74-fe8db052afc8\" --scope \"https://management.core.windows.net//.default\""
+
+# zellij alias
 alias zt=zellij
 alias ztr="zellij run"
+alias ztcomops="zellij -n comops -s ComOps360"
+alias ztzc3="zellij -n zc3 -s ZC3"
+alias ztzc2="zellij -n zc2 -s RPI5"
+alias ztzc1="zellij -n zc1 -s ZC1.5"
+alias ztutils="zellij -n utilites -s UtilitesScripts"
+alias ztgen="zellij -n general -s Home"
+alias ztka="zellij ka"
+alias ztk="zellij k"
+alias ztls="zellij ls"
+alias zta="zellij a"
+alias ztda="zellij da"
+alias ztd="zellij d"
 
-start_stop_vm()
-{
-  local vm=$1
-  local state=$2
-  gcloud compute instances $state $vm --project ftc-qa-283616
-}
-
-find_and_edit ()
-{
-  local file
-  file=($(find * -type f | fzf-tmux --border --reverse --preview="bat --number --color=always {}"))
-  if [ "$file" != "" ]; then
-    vim $file
-  fi
-}
-
-alias fe=find_and_edit
-
-find_and_edit_with_editor_of_choice ()
-{
-    local file
-    local editor=$1
-    if [ -x "$(command -v "$editor")" ]; then
-        file=$(find * -type f | fzf-tmux --border --reverse --preview="bat --number --color=always {}")
-        if [ "$file" != "" ] && [ "$editor" != "" ]; then
-            $editor $file
-        fi
-    else 
-        echo "$editor not found"
-    fi
-}
-
-alias fewe=find_and_edit_with_editor_of_choice $1

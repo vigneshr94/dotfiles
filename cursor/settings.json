@@ -195,7 +195,13 @@
 
     // C Lang
     "cmake.configureOnOpen": true,
-    "cSpell.userWords": ["Balena", "Vigneswar"],
+    "cSpell.userWords": [
+        "Balena",
+        "timesync",
+        "Vigneswar",
+        "xbee",
+        "Zigbee"
+    ],
     
     "remote.SSH.remotePlatform": {
         "rvigneswar@192.168.95.249": "linux",
@@ -345,5 +351,6 @@
                 }
             ]
         }
-    ]
+    ],
+    "workbench.sideBar.location": "right"
 }
